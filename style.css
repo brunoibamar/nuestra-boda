@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=DM+Sans:wght@400;500;600&display=swap');
+:root{--blue:#153b99;--ink:#272222;--paper:#e9e8e1}
+*{box-sizing:border-box}
+body{margin:0;background:#e7e6e1;color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100svh;display:flex;justify-content:center;overflow-x:hidden}
+button{font:inherit;-webkit-tap-highlight-color:transparent}
+button:focus-visible{outline:3px solid #be326b;outline-offset:7px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.invitation{position:relative;isolation:isolate;width:min(100%,668px);aspect-ratio:668/1194;min-height:100svh;overflow:hidden;container-type:inline-size;box-shadow:0 0 70px #34352e25}
+.scene{position:absolute;inset:0;z-index:-1;background:url('assets/mexican-wedding-scene.png') center/100% 100% no-repeat}
+.stage{position:absolute;left:12%;top:43%;width:76%;height:27%;perspective:1200px;z-index:2}
+.envelope{width:100%;height:100%;position:absolute;inset:0;transform:rotate(-16deg);isolation:isolate;transition:transform 1.5s ease .4s}
+.patterned{position:absolute;background:#e6e6e0 url('assets/blue-floral-paper.png') center/100% auto}
+.back{inset:0;border-radius:2px;z-index:0;box-shadow:-4px 13px 14px #23262945,0 2px 3px #25274636}
+.letter{position:absolute;inset:3% 5% 1%;height:96%;margin:0;background:var(--paper);box-shadow:0 -2px 9px #242e3c24;padding:5%;z-index:1;transition:transform 1.7s cubic-bezier(.3,.1,.18,1) 1s,height 1.7s ease 1s;overflow:hidden}
+.letter:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;background:url('assets/blue-floral-paper.png') center/cover;filter:grayscale(1);mix-blend-mode:multiply;mask-image:linear-gradient(#00000020,#00000020)}
+.letter-frame{height:100%;position:relative;text-align:center;display:flex;flex-direction:column;align-items:center;padding-top:2%}
+.letter-caption{font:500 4cqw/1.2 'Cormorant Garamond',Georgia,serif;color:var(--blue);margin:0 0 4%}
+h2{font:400 16cqw/.78 'Great Vibes','Cormorant Garamond',cursive;margin:0;display:flex;flex-direction:column;align-items:center;text-shadow:.5px .5px #27222222}
+h2 span:first-child{padding-right:15%}
+h2 span:last-child{padding-left:10%}
+h2 i{font:500 6.5cqw/1 'Cormorant Garamond',Georgia,serif;margin:1% 0 3%;align-self:flex-end;padding-right:16%}
+.letter-message{font:500 italic 3.5cqw/1.25 'Cormorant Garamond',Georgia,serif;color:var(--blue);margin:7% 0 0}
+.letter-foot{font-size:1.35cqw;letter-spacing:.22cqw;color:var(--blue);margin:5% 0 0}
+.pocket{inset:0;clip-path:polygon(0 0,50% 57%,100% 0,100% 100%,0 100%);z-index:3;border-radius:2px;background-position:35% 62%;background-size:108% auto}
+.pocket:after{content:"";position:absolute;inset:0;background:linear-gradient(32deg,transparent 49.6%,#122d6a2c 50%,transparent 50.5%),linear-gradient(-32deg,transparent 49.6%,#122d6a2c 50%,transparent 50.5%)}
+.pocket-edge{position:absolute;inset:0;clip-path:polygon(0 100%,50% 49%,100% 100%);background:linear-gradient(0deg,#293f8c0a,#f9f7ed14);z-index:4}
+.flap{inset:0;clip-path:polygon(0 0,100% 0,50% 61%);transform-origin:top;z-index:5;filter:brightness(.94) drop-shadow(0 4px 2px #15236355);background-position:65% 20%;background-size:115% auto;transition:transform 1s ease .55s,filter 1s;backface-visibility:visible}
+.flap:after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 285' preserveAspectRatio='none'%3E%3Cpath d='M0 1L240 174L480 1' fill='none' stroke='%23192e70' stroke-opacity='.45' stroke-width='3'/%3E%3C/svg%3E") center/100% 100%,linear-gradient(180deg,#ffffff00,#2b3e8b18)}
+.seal{position:absolute;z-index:6;width:24%;aspect-ratio:117/124;left:38%;top:34%;border:0;padding:0;background:none;cursor:pointer;filter:drop-shadow(2px 5px 3px #302b3359);transition:transform 1.2s cubic-bezier(.4,0,.2,1),filter 1s;transform:rotate(16deg)}
+.mazapan-photo{display:block;width:100%;height:100%;background:url('assets/mazapan-de-la-rosa.png') center/contain no-repeat}
+.seal:hover{filter:drop-shadow(2px 6px 7px #302b3370)}
+.controls{position:absolute;left:5%;right:24%;top:74%;z-index:7;text-align:center;min-height:9%;transition:transform .8s}
+.open-button{border:1px solid #17378c;background:#18398ff5;box-shadow:0 3px 9px #23304c26;color:#fffdf4;font-size:2.3cqw;letter-spacing:.2cqw;padding:3.1cqw 4.4cqw;cursor:pointer;transition:background .2s,opacity .4s}
+.open-button span{margin-left:4cqw;font-size:3.5cqw;vertical-align:middle}
+.open-button:hover{background:#102b76}
+.controls>p{font:500 italic 2.8cqw/1.2 'Cormorant Garamond',Georgia,serif;color:#2c3a5e;margin:2.8cqw 0}
+.replay{border:1px solid #243e9640;background:#eeece2eb;box-shadow:0 2px 7px #23304c18;color:var(--blue);cursor:pointer;font-size:2.2cqw;padding:2.3cqw 3cqw;letter-spacing:.05cqw}
+.opened .envelope{transform:rotate(-16deg) translateY(5%)}
+.opened .seal{transform:translate(-125%,-250%) rotate(16deg);filter:drop-shadow(2px 5px 3px #302b333b)}
+.opened .flap{transform:rotateX(180deg);z-index:0;filter:brightness(.91)}
+.opened .letter{transform:translateY(-48%);height:138%}
+.opened .open-button{opacity:0;pointer-events:none;position:absolute;width:1px;height:1px;overflow:hidden;padding:0;border:0;clip-path:inset(50%)}
+.opened .controls>p{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+@media(min-width:700px){.invitation{width:min(668px,calc(100svh * .559464));height:100svh;min-height:640px;aspect-ratio:auto}body{background:#e7e6e1 url('assets/mexican-wedding-scene.png') center/cover fixed}body:before{content:"";position:fixed;inset:0;background:#e8e7e1de;backdrop-filter:blur(12px);z-index:-1}}
+@media(max-width:360px){.invitation{min-height:640px}.controls{right:20%}.open-button{font-size:2.6cqw}.controls>p{font-size:3.1cqw}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition-duration:.01ms!important;transition-delay:0s!important;animation-duration:.01ms!important}}
+
+.cactus-foreground{position:absolute;inset:0;z-index:5;pointer-events:none;background:url("assets/mexican-wedding-scene.png") center/100% 100% no-repeat;clip-path:polygon(100% 56%,90% 56.5%,85% 57%,83% 59%,80% 60%,79% 66%,79% 88%,77% 89%,77% 78%,75% 74%,73% 73%,72% 72%,66% 71.5%,61% 72.5%,58% 74%,57% 78%,57% 91%,55% 92%,50% 91%,49% 90%,46% 90.5%,43% 92%,42% 95%,43% 98%,46% 100%,100% 100%)}
+
+/* Reference lettering and ordered closing sequence. */
+.letter{visibility:hidden}
+.letter:before{background:none;opacity:0}
+.letter-frame{padding:0;display:block;text-align:center}
+.letter-art{display:block;width:86%;height:auto;margin:0 auto;user-select:none}
+.opened .letter{visibility:visible}
+.opened.closing-letter .letter{transform:translateY(0);height:96%;transition:transform .9s cubic-bezier(.4,0,.3,1),height .9s cubic-bezier(.4,0,.3,1)}
+.closing-flap .letter,.resealing .letter{visibility:hidden;transform:translateY(0);height:96%;transition:none}
+.closing-flap .flap{transform:rotateX(0);z-index:5;transition:transform 1s ease,filter 1s}
+.closing-flap .seal{transform:translate(-125%,-250%) rotate(16deg);transition:none}
+.closing .open-button{opacity:0;pointer-events:none;position:absolute;width:1px;height:1px;overflow:hidden;padding:0;border:0;clip-path:inset(50%)}
+.closing .controls>p{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.replay:disabled{cursor:wait}

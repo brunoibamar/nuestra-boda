@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#eceae4">
+<meta name="description" content="Nuestra boda. Sarahí y Alan. 30 de agosto de 2027.">
+<title>Sarahí & Alan · Nuestra boda</title>
+<link rel="preload" as="image" href="assets/mexican-wedding-scene.png">
+<link rel="preload" as="image" href="assets/blue-floral-paper.png">
+<link rel="preload" as="image" href="assets/sarahi-alan-lettering.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="invitation" aria-label="Invitación de boda de Sarahí y Alan">
+ <div class="scene" aria-hidden="true"></div>
+ <h1 class="sr-only">La boda de Sarahí y Alan</h1>
+ <div class="stage" id="stage">
+  <div class="envelope" id="envelope">
+   <div class="back patterned"></div>
+   <article class="letter" id="letter" aria-label="Nuestra boda. Sarahí y Alan. 30 de agosto de 2027." aria-hidden="true">
+    <div class="letter-frame">
+     <img class="letter-art" src="assets/sarahi-alan-lettering.png" alt="Nuestra boda. Sarahí & Alan. 30.08.2027." width="1328" height="1216" draggable="false">
+    </div>
+   </article>
+   <div class="pocket patterned"></div>
+   <div class="pocket-edge"></div>
+   <div class="flap patterned"></div>
+   <button class="seal" id="seal" aria-label="Abrir la invitación de Sarahí y Alan">
+    <span class="mazapan-photo" role="img" aria-label="Mazapán De la Rosa"></span>
+   </button>
+  </div>
+ </div>
+ <div class="cactus-foreground" aria-hidden="true"></div>
+ <div class="controls">
+  <button id="open" class="open-button">Abrir invitación <span aria-hidden="true">↗</span></button>
+  <p id="hint" aria-live="polite">Un dulce comienzo para nuestra historia</p>
+  <button id="replay" class="replay" hidden>↺ &nbsp; Cerrar el sobre</button>
+ </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
+
